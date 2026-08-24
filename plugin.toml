@@ -33,3 +33,7 @@ entry = "download_widget.luau"
 [[widget]]
 id = "upload"
 entry = "upload_widget.luau"
+
+[[widget]]
+id = "score"
+entry = "score_widget.luau"
