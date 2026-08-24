@@ -9,7 +9,7 @@ Unofficial Noctalia Plugin to view your Whatpulse Stats from the local api endpo
 ## Requirements
 
 1. Whatpulse Account at [whatpulse.org](https://whatpulse.org/register)
-2. Whatpulse Desktop [Application](https://whatpulse.org/downloads) 
+2. Whatpulse Desktop [Client](https://whatpulse.org/downloads) **v5.6** or above.  
 3. (Optional, only if you need network stats) Whatpulse [Network Service](https://github.com/whatpulse/linux-external-pcap-service)
 
 ## Usage
