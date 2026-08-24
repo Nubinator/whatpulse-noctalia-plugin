@@ -28,14 +28,16 @@ local function fetchStats()
 
   noctalia.runAsync(cmd, function(result)
     local rawOutput = result and result.stdout or ""
-    local count = tonumber(string.match(rawOutput, "^%s*(%d+)%s*$")) or 0
-    render(count)
+    local count = tonumber(string.match(rawOutput, "^%s*(%d+)%s*$"))
+    if count then
+      render(count)
+    end
   end)
 end
 
 -- Mouse Widget
 function update()
-  noctalia.setUpdateInterval(2000)
+  noctalia.setUpdateInterval(5000)
   fetchStats()
   barWidget.setGlyph("mouse")
 end
