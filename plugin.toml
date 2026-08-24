@@ -1,6 +1,6 @@
-id = "Nubinator/whatpulse"
+id = "Nubinator/whatpulse-plugin"
 name = "Whatpulse (UNOFFICIAL)"
-version = "0"
+version = "1.0.0"
 plugin_api = 4
 author = "Nubinator"
 license = "MIT"
