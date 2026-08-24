@@ -1,0 +1,17 @@
+id = "Nubinator/whatpulse"
+name = "Whatpulse (UNOFFICIAL)"
+version = "0"
+plugin_api = "4"
+author = "Nubinator"
+license = "MIT"
+dependencies = []
+tags = ["stats", "bar", "panel", "productivity"]
+description = "A quick glance at your whatpulse stats"
+
+[[widget]]
+id = "whatpulse"
+entry = "widget.luau"
+
+[[service]]
+id = "whatpulse-service"
+entry = "service.luau"
