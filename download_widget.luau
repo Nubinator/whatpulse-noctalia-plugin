@@ -42,13 +42,15 @@ end
 
 -- Pulse
 function onClick()
-  noctalia.runAsync("echo '{\"source\":\"plugin\",\"action\":\"pulse\"}' | websocat ws://localhost:3489 >/dev/null 2>&1", function() end)
+  local wsport = noctalia.getConfig("websocket_port")
+  noctalia.runAsync("echo '{\"source\":\"plugin\",\"action\":\"pulse\"}' | websocat ws://localhost:" .. wsport .." >/dev/null 2>&1", function() end)
   fetchStats()
 end
 
 -- Open Whatpulse
 function onRightClick()
-  noctalia.runAsync("echo '{\"source\":\"plugin\",\"action\":\"open-window\"}' | websocat ws://localhost:3489 >/dev/null 2>&1", function() end)
+  local wsport = noctalia.getConfig("websocket_port")
+  noctalia.runAsync("echo '{\"source\":\"plugin\",\"action\":\"open-window\"}' | websocat ws://localhost:" .. wsport .." >/dev/null 2>&1", function() end)
 end
 
 -- Initial render
