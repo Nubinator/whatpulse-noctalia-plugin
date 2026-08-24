@@ -7,6 +7,7 @@ license = "MIT"
 dependencies = []
 tags = ["system", "bar", "panel", "productivity", "utility"]
 description = "A quick glance at your whatpulse stats"
+icon = "graph"
 
 [[widget]]
 id = "whatpulse"
