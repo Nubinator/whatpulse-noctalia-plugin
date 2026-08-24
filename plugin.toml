@@ -5,7 +5,7 @@ plugin_api = "4"
 author = "Nubinator"
 license = "MIT"
 dependencies = []
-tags = ["stats", "bar", "panel", "productivity"]
+tags = ["system", "bar", "panel", "productivity", "utility"]
 description = "A quick glance at your whatpulse stats"
 
 [[widget]]
