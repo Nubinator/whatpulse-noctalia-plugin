@@ -9,6 +9,20 @@ tags = ["system", "bar", "panel", "productivity", "utility"]
 description = "A quick glance at your whatpulse stats"
 icon = "graph"
 
+[[setting]]
+key = "listen_on_port"
+type = "string"
+label_key = "settings.listen_on_port.label"
+description_key = "settings.listen_on_port.description"
+default = "3490"
+
+[[setting]]
+key = "websocket_port"
+type = "string"
+label_key = "settings.websocket_port.label"
+description_key = "settings.websocket_port.description"
+default = "3489"
+
 [[widget]]
 id = "whatpulse"
 entry = "widget.luau"

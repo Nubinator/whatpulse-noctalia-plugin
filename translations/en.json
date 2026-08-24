@@ -1,0 +1,12 @@
+{
+    "settings": {
+        "listen_on_port": {
+            "description": "Listen on port set in Whatpulse Client API settings.",
+            "label": "Listen on port"
+        },
+        "websocket_port": {
+            "description": "WebSocket port set in Whatpulse Client API settings.",
+            "label": "WebSocket port"
+        }
+    }
+}
