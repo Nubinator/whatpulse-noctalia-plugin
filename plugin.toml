@@ -24,8 +24,12 @@ description_key = "settings.websocket_port.description"
 default = "3489"
 
 [[widget]]
-id = "whatpulse"
-entry = "widget.luau"
+id = "keypress"
+entry = "keypress_widget.luau"
+
+[[widget]]
+id = "clicks"
+entry = "clicks_widget.luau"
 
 [[service]]
 id = "whatpulse-service"

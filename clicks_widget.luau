@@ -1,17 +1,3 @@
--- Placeholder
-
--- function update()
---  noctalia.setUpdateInterval(1000)
---  barWidget.setGlyph("puzzle")
---  barWidget.setText("Hello")
---end
-
---function onClick()
---  noctalia.notify("Hello", "you clicked me")
---end
-
-
-
 -- Add commas to the number
 local function formatNumber(n: number): string
   local formatted = tostring(n)
@@ -24,21 +10,21 @@ local function formatNumber(n: number): string
 end
 
 -- Hover Display
-local function render(keysToday: number?)
-  local count = keysToday or 0
+local function render(clicksToday: number?)
+  local count = clicksToday or 0
   if count > 0 then
     local formattedCount = formatNumber(count)
     barWidget.setText(formattedCount)
-    barWidget.setTooltip("Today's Keypresses: " .. formattedCount)
+    barWidget.setTooltip("Today's Clicks: " .. formattedCount)
   else
     barWidget.setText("0")
-    barWidget.setTooltip("No keypresses recorded today")
+    barWidget.setTooltip("No Clicks recorded today")
   end
 end
 
--- Fetch Key Storkes
+-- Fetch Clicks Strokes
 local function fetchStats()
-  local cmd = 'sqlite3 -readonly "$HOME/.local/share/WhatPulse/whatpulse.db" "SELECT COALESCE(SUM(count), 0) FROM keypresses WHERE day = DATE(\'now\', \'localtime\');" 2>/dev/null'
+  local cmd = 'sqlite3 -readonly "$HOME/.local/share/WhatPulse/whatpulse.db" "SELECT COALESCE(SUM(count), 0) FROM mouseclicks WHERE day = DATE(\'now\', \'localtime\');" 2>/dev/null'
 
   noctalia.runAsync(cmd, function(result)
     local rawOutput = result and result.stdout or ""
@@ -47,11 +33,11 @@ local function fetchStats()
   end)
 end
 
--- Key Widget
+-- Mouse Widget
 function update()
   noctalia.setUpdateInterval(2000)
   fetchStats()
-  barWidget.setGlyph("keyboard")
+  barWidget.setGlyph("mouse")
 end
 
 -- Pulse
