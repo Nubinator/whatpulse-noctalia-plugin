@@ -19,7 +19,7 @@ Unofficial Noctalia Plugin to view your Whatpulse Stats from the local whatpulse
 
 1) Download and login to the [Client](https://whatpulse.org/downloads)
 2) Navigate to Client API section over on the Settings tab and enable the "Enable Client API" checkbox
-3) Take note of the "WebSocket port" which you will need the plugin settings page. (3489 is the default so if you havent changed it, you can probably skip this step)
+3) Take note of the "WebSocket port" which you will need in the plugin settings page. (`3489` is the default so if you haven't changed it, you can probably skip this step)
 
 ## Setting
 
