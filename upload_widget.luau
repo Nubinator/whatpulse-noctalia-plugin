@@ -35,7 +35,8 @@ end
 
 -- Upload Widget
 function update()
-  noctalia.setUpdateInterval(5000)
+  local polling = noctalia.getConfig("polling_frequency")
+  noctalia.setUpdateInterval((tonumber(polling))*1000)
   barWidget.setGlyph("upload")
   fetchStats()
 end

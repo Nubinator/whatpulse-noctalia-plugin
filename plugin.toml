@@ -16,6 +16,14 @@ label_key = "settings.websocket_port.label"
 description_key = "settings.websocket_port.description"
 default = "3489"
 
+[[setting]]
+key = "polling_frequency"
+type = "int"
+label_key = "settings.polling_frequency.label"
+description_key = "settings.polling_frequency.description"
+default = 5
+min = 2
+max = 120
 
 
 [[widget]]

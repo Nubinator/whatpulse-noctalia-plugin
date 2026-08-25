@@ -1,12 +1,12 @@
 {
     "settings": {
-        "listen_on_port": {
-            "description": "Listen on port set in Whatpulse Client API settings.",
-            "label": "Listen on port"
-        },
         "websocket_port": {
             "description": "WebSocket port set in Whatpulse Client API settings. Default: 3489",
             "label": "WebSocket port"
+        },
+        "polling_frequency": {
+            "description": "How often you want the widgets to update in Seconds. Recommended: ≥5 seconds",
+            "label": "Update Frequency (s)"
         }
     }
 }
