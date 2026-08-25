@@ -5,7 +5,7 @@
             "label": "Listen on port"
         },
         "websocket_port": {
-            "description": "WebSocket port set in Whatpulse Client API settings.",
+            "description": "WebSocket port set in Whatpulse Client API settings. Default: 3489",
             "label": "WebSocket port"
         }
     }
