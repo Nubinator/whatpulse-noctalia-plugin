@@ -28,20 +28,20 @@ max = 120
 
 [[widget]]
 id = "keypress"
-entry = "keypress_widget.luau"
+entry = "./widgets/keypress_widget.luau"
 
 [[widget]]
 id = "clicks"
-entry = "clicks_widget.luau"
+entry = "./widgets/clicks_widget.luau"
 
 [[widget]]
 id = "download"
-entry = "download_widget.luau"
+entry = "./widgets/download_widget.luau"
 
 [[widget]]
 id = "upload"
-entry = "upload_widget.luau"
+entry = "./widgets/upload_widget.luau"
 
 [[widget]]
 id = "score"
-entry = "score_widget.luau"
+entry = "./widgets/score_widget.luau"
