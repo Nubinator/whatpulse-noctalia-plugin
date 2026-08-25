@@ -7,7 +7,7 @@ Unofficial Noctalia Plugin to view your Whatpulse Stats from the local whatpulse
 | Field | Value |
 | --- | --- |
 | ID | `Nubinator/whatpulse-plugin` |
-| Entries | Bar widget: `keypress`, 'clicks`, `download`, `upload`, `score` |
+| Entries | Bar widget: `keypress`, `clicks`, `download`, `upload`, `score` |
 
 ## Requirements
 
