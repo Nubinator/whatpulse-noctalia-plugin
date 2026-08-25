@@ -27,7 +27,6 @@ Unofficial Noctalia Plugin to view your Whatpulse Stats from the local whatpulse
 | --- | --- | --- | --- |
 | `WebSocket Port` | `string` | `"3489"` | Websocket port used for pulse action and to open the app |
 
-** Need to Make it a `int` but having an issue with it working at the moment.
 
 ## FAQ
 
