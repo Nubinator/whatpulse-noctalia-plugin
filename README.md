@@ -32,7 +32,7 @@ Unofficial Noctalia Plugin to view your Whatpulse Stats from the local whatpulse
 ## FAQ
 
 1) Why are my key presses and clicks not being counted?
-A) Make sure you have given the nessasary permissions to the whatpulse application. [Insturctions](https://whatpulse.org/help/docs/getting-started/installing-the-linux-client/)
+- Make sure you have given the nessasary permissions to the whatpulse application. [Insturctions](https://whatpulse.org/help/docs/getting-started/installing-the-linux-client/)
 
 2) What is the WebSocket used for, if the stats are taken from the database?
-A) The WebSocket is used for the click actions for the widget (ie. Right Click to open the whatpulse window and Left Click to Manually Pulse)
+- The WebSocket is used for the click actions for the widget (ie. Right Click to open the whatpulse window and Left Click to Manually Pulse)
