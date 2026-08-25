@@ -1,10 +1,13 @@
 # Whatpulse (UNOFFICIAL)
 
-Unofficial Noctalia Plugin to view your Whatpulse Stats from the local api endpoint.
+Unofficial Noctalia Plugin to view your Whatpulse Stats from the local whatpulse database.
 
 ## Plugin
 
-
+| Field | Value |
+| --- | --- |
+| ID | `Nubinator/whatpulse-plugin` |
+| Entries | Bar widget: `keypress`, 'clicks`, `download`, `upload`, `score` |
 
 ## Requirements
 
@@ -14,8 +17,22 @@ Unofficial Noctalia Plugin to view your Whatpulse Stats from the local api endpo
 
 ## Usage
 
+1) Download and login to the [Client](https://whatpulse.org/downloads)
+2) Navigate to Client API section over on the Settings tab and enable the "Enable Client API" checkbox
+3) Take note of the "WebSocket port" which you will need the plugin settings page. (3489 is the default so if you havent changed it, you can probably skip this step)
+
+## Setting
+
+| Setting | Type | Default| Description |
+| --- | --- | --- | --- |
+| `WebSocket Port` | `string` | `"3489"` | Websocket port used for pulse action and to open the app |
+
+** Need to Make it a `int` but having an issue with it working at the moment.
 
 ## FAQ
 
 1) Why are my key presses and clicks not being counted?
 A) Make sure you have given the nessasary permissions to the whatpulse application. [Insturctions](https://whatpulse.org/help/docs/getting-started/installing-the-linux-client/)
+
+2) What is the WebSocket used for, if the stats are taken from the database?
+A) The WebSocket is used for the click actions for the widget (ie. Right Click to open the whatpulse window and Left Click to Manually Pulse)
