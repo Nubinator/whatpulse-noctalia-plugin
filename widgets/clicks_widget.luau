@@ -40,7 +40,7 @@ function update()
   local polling = noctalia.getConfig("polling_frequency")
   noctalia.setUpdateInterval((tonumber(polling))*1000)
   fetchStats()
-  barWidget.setGlyph("mouse")
+  barWidget.setGlyph("click")
 end
 
 -- Pulse
