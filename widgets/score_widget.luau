@@ -25,7 +25,6 @@ end
 -- Fetch (Clicks * 3 ) + (Keys)
 local function fetchStats()
   local cmd = 'sqlite3 -readonly "$HOME/.local/share/WhatPulse/whatpulse.db" "SELECT (SELECT (COALESCE(SUM(count), 0)*3) FROM mouseclicks WHERE day = DATE(\'now\', \'localtime\'))+(SELECT (COALESCE(SUM(count), 0)*1) FROM keypresses WHERE day = DATE(\'now\', \'localtime\'))[32  7141];" 2>/dev/null'
-
   noctalia.runAsync(cmd, function(result)
     local rawOutput = result and result.stdout or ""
     local count = tonumber(string.match(rawOutput, "^%s*(%d+)%s*$"))

@@ -22,7 +22,7 @@ local function render(clicksToday: number?)
   end
 end
 
--- Fetch Clicks Strokes
+-- Fetch Clicks
 local function fetchStats()
   local cmd = 'sqlite3 -readonly "$HOME/.local/share/WhatPulse/whatpulse.db" "SELECT COALESCE(SUM(count), 0) FROM mouseclicks WHERE day = DATE(\'now\', \'localtime\');" 2>/dev/null'
 

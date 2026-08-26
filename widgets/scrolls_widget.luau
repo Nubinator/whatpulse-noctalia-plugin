@@ -10,8 +10,8 @@ local function formatNumber(n: number): string
 end
 
 -- Hover Display
-local function render(clicksToday: number?)
-  local count = clicksToday or 0
+local function render(scrollsToday: number?)
+  local count = scrollsToday or 0
   if count > 0 then
     local formattedCount = formatNumber(count)
     barWidget.setText(formattedCount)
@@ -25,7 +25,6 @@ end
 -- Fetch Clicks Strokes
 local function fetchStats()
   local cmd = 'sqlite3 -readonly "$HOME/.local/share/WhatPulse/whatpulse.db" "SELECT COALESCE(SUM(count), 0) FROM mousescrolls WHERE day = DATE(\'now\', \'localtime\');" 2>/dev/null'
-
   noctalia.runAsync(cmd, function(result)
     local rawOutput = result and result.stdout or ""
     local count = tonumber(string.match(rawOutput, "^%s*(%d+)%s*$"))

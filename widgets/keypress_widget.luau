@@ -25,7 +25,6 @@ end
 -- Fetch Key Storkes
 local function fetchStats()
   local cmd = 'sqlite3 -readonly "$HOME/.local/share/WhatPulse/whatpulse.db" "SELECT COALESCE(SUM(count), 0) FROM keypresses WHERE day = DATE(\'now\', \'localtime\');" 2>/dev/null'
-
   noctalia.runAsync(cmd, function(result)
     local rawOutput = result and result.stdout or ""
     local count = tonumber(string.match(rawOutput, "^%s*(%d+)%s*$"))
