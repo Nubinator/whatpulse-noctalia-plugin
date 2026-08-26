@@ -45,3 +45,7 @@ entry = "./widgets/upload_widget.luau"
 [[widget]]
 id = "score"
 entry = "./widgets/score_widget.luau"
+
+[[widget]]
+id = "scrolls"
+entry = "./widgets/scrolls_widget.luau"

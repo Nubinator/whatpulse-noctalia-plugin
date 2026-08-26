@@ -15,16 +15,16 @@ local function render(clicksToday: number?)
   if count > 0 then
     local formattedCount = formatNumber(count)
     barWidget.setText(formattedCount)
-    barWidget.setTooltip("Today's Clicks: " .. formattedCount)
+    barWidget.setTooltip("Today's Scrolls: " .. formattedCount)
   else
     barWidget.setText("0")
-    barWidget.setTooltip("No Clicks recorded today")
+    barWidget.setTooltip("No Scrolls recorded today")
   end
 end
 
 -- Fetch Clicks Strokes
 local function fetchStats()
-  local cmd = 'sqlite3 -readonly "$HOME/.local/share/WhatPulse/whatpulse.db" "SELECT COALESCE(SUM(count), 0) FROM mouseclicks WHERE day = DATE(\'now\', \'localtime\');" 2>/dev/null'
+  local cmd = 'sqlite3 -readonly "$HOME/.local/share/WhatPulse/whatpulse.db" "SELECT COALESCE(SUM(count), 0) FROM mousescrolls WHERE day = DATE(\'now\', \'localtime\');" 2>/dev/null'
 
   noctalia.runAsync(cmd, function(result)
     local rawOutput = result and result.stdout or ""
@@ -35,7 +35,7 @@ local function fetchStats()
   end)
 end
 
--- Clicks Widget
+-- Scrolls Widget
 function update()
   local polling = noctalia.getConfig("polling_frequency")
   noctalia.setUpdateInterval((tonumber(polling))*1000)
